@@ -2,46 +2,70 @@ import "./Home.css";
 
 function Home() {
   return (
-    <div className="home-container">
-      {/* Header */}
-      <header className="home-header">
-        <h1>TOEIC Practice Web</h1>
+    <div className="home">
+      {/* Navbar */}
+      <header className="navbar">
+        <div className="logo">TOEIC Practice</div>
         <nav>
-          <ul>
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Học từ vựng</a></li>
-            <li><a href="#">Thi thử</a></li>
-            <li><a href="#">Liên hệ</a></li>
-          </ul>
+          <a href="/">Home</a>
+          <a href="/vocabulary">Vocabulary</a>
+          <a href="/practice">Practice</a>
+          <a href="/test">Mock Test</a>
         </nav>
       </header>
 
-      {/* Hero / Banner */}
-      <section className="home-hero">
-        <h2>Chinh phục TOEIC dễ dàng</h2>
-        <p>Học từ vựng thông minh, thi thử chính xác, nâng band điểm nhanh chóng.</p>
-        <button>Bắt đầu học</button>
+      {/* Hero */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Boost Your TOEIC Score</h1>
+          <p>
+            Learn vocabulary effectively, practice with real TOEIC questions,
+            and track your progress.
+          </p>
+          <div className="hero-actions">
+            <button className="btn primary">Start Learning</button>
+            <button className="btn outline">Take a Test</button>
+          </div>
+        </div>
       </section>
 
       {/* Features */}
-      <section className="home-features">
-        <div className="feature-card">
-          <h3>Học từ vựng</h3>
-          <p>Hệ thống từ vựng TOEIC theo cấp độ, giúp bạn ghi nhớ nhanh.</p>
-        </div>
-        <div className="feature-card">
-          <h3>Thi thử TOEIC</h3>
-          <p>Đề thi chuẩn format, chấm điểm tự động và có giải thích đáp án.</p>
-        </div>
-        <div className="feature-card">
-          <h3>Thống kê tiến bộ</h3>
-          <p>Theo dõi tiến bộ học tập và nâng cao band điểm một cách hiệu quả.</p>
+      <section className="features">
+        <h2>What you can do</h2>
+
+        <div className="feature-list">
+          <div className="feature-card">
+            <h3>📘 Vocabulary</h3>
+            <p>
+              TOEIC vocabulary organized by topic and difficulty level.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>📝 Practice</h3>
+            <p>
+              Practice listening & reading questions with explanations.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <h3>📊 Progress</h3>
+            <p>
+              Track your learning progress and test results easily.
+            </p>
+          </div>
         </div>
       </section>
 
+      {/* CTA */}
+      <section className="cta">
+        <h2>Ready to improve your TOEIC?</h2>
+        <button className="btn primary">Get Started Now</button>
+      </section>
+
       {/* Footer */}
-      <footer className="home-footer">
-        <p>© 2026 TOEIC Practice Web. All rights reserved.</p>
+      <footer className="footer">
+        © 2026 TOEIC Practice Web
       </footer>
     </div>
   );
