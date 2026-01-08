@@ -15,7 +15,7 @@ function Home() {
       </header>
 
       {/* Hero */}
-      <section className="hero">
+      <section className="hero animate-fade-up">
         <div className="hero-content">
           <h1>Boost Your TOEIC Score</h1>
           <p>
@@ -30,35 +30,29 @@ function Home() {
       </section>
 
       {/* Features */}
-      <section className="features">
+      <section className="features animate-fade-up delay-1">
         <h2>What you can do</h2>
 
         <div className="feature-list">
           <div className="feature-card">
             <h3>📘 Vocabulary</h3>
-            <p>
-              TOEIC vocabulary organized by topic and difficulty level.
-            </p>
+            <p>TOEIC vocabulary organized by topic and difficulty level.</p>
           </div>
 
           <div className="feature-card">
             <h3>📝 Practice</h3>
-            <p>
-              Practice listening & reading questions with explanations.
-            </p>
+            <p>Practice listening & reading questions with explanations.</p>
           </div>
 
           <div className="feature-card">
             <h3>📊 Progress</h3>
-            <p>
-              Track your learning progress and test results easily.
-            </p>
+            <p>Track your learning progress and test results easily.</p>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="cta">
+      <section className="cta animate-fade-up delay-2">
         <h2>Ready to improve your TOEIC?</h2>
         <button className="btn primary">Get Started Now</button>
       </section>
