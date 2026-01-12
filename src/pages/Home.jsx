@@ -1,9 +1,12 @@
 import "./Home.css";
 import "../styles/animations.css";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import {useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom"; 
 
 function Home() {
   useScrollAnimation();
+  const navigate = useNavigate();
 
   return (
     <div className="home">
@@ -11,10 +14,15 @@ function Home() {
       <header className="navbar reveal active">
         <div className="logo">TOEIC Practice</div>
         <nav>
-          <a href="/">Home</a>
-          <a href="/vocabulary">Vocabulary</a>
-          <a href="/practice">Practice</a>
-          <a href="/test">Mock Test</a>
+          <button 
+          className = "btn primary"
+          onClick ={() => navigate("/practice")}
+          >
+            Start Learning
+          </button>
+          <Link to="/">Home</Link>
+          <Link to="/vocabulary">Vocabulary</Link>
+          <Link to="/practice">Practice</Link>
         </nav>
       </header>
 
