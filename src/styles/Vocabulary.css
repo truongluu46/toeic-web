@@ -1,0 +1,44 @@
+.vocab-page {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.vocab-filter {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.vocab-filter input,
+.vocab-filter select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.vocab-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.vocab-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9fafb;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.vocab-card h3 {
+  margin-bottom: 6px;
+}
+
+.type {
+  font-size: 13px;
+  color: #2563eb;
+}

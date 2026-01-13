@@ -1,0 +1,56 @@
+.practice-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.part-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.part-btn {
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.part-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.question-card {
+  background: #f9fafb;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.answers {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.answers button {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.answers button:hover {
+  background: #2563eb;
+  color: white;
+}

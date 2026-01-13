@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/practice" element={<Practice />} />
-      <Route path="/practice" element={<Practice />} />
+      <Route path="/vocabulary" element={<Vocabulary />} />
     </Routes>
     </BrowserRouter>
   );
