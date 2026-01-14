@@ -2,35 +2,65 @@ import "../styles/Practice.css";
 
 export default function Practice() {
   return (
-    <div className="practice-page">
-      <h1>📝 TOEIC Practice</h1>
-      <p className="subtitle">
-        Practice real TOEIC questions by part
-      </p>
+    <div className="practice-wrapper">
+      {/* Header */}
+      <div className="practice-header">
+        <h1>TOEIC Practice</h1>
+        <div className="practice-info">
+          <span>Part 5</span>
+          <span>Question 1 / 30</span>
+          <span className="timer">⏱ 19:45</span>
+        </div>
+      </div>
 
-      {/* Part selection */}
-      <div className="part-list">
-        <button className="part-btn">Part 1</button>
-        <button className="part-btn">Part 2</button>
-        <button className="part-btn">Part 3</button>
-        <button className="part-btn">Part 4</button>
-        <button className="part-btn active">Part 5</button>
-        <button className="part-btn">Part 6</button>
-        <button className="part-btn">Part 7</button>
+      {/* Part selector */}
+      <div className="part-selector">
+        {["1","2","3","4","5","6","7"].map((p) => (
+          <button
+            key={p}
+            className={`part-chip ${p === "5" ? "active" : ""}`}
+          >
+            Part {p}
+          </button>
+        ))}
       </div>
 
       {/* Question card */}
       <div className="question-card">
-        <h3>Question 1</h3>
-        <p>
-          The meeting has been postponed _____ next Monday.
+        <div className="question-title">
+          Question 1
+        </div>
+
+        <p className="question-text">
+          The meeting has been postponed _____ next Monday due to scheduling conflicts.
         </p>
 
-        <div className="answers">
-          <button>A. at</button>
-          <button>B. on</button>
-          <button>C. in</button>
-          <button>D. for</button>
+        <div className="options">
+          <label className="option">
+            <input type="radio" name="q1" />
+            <span>A. at</span>
+          </label>
+
+          <label className="option">
+            <input type="radio" name="q1" />
+            <span>B. on</span>
+          </label>
+
+          <label className="option">
+            <input type="radio" name="q1" />
+            <span>C. in</span>
+          </label>
+
+          <label className="option">
+            <input type="radio" name="q1" />
+            <span>D. for</span>
+          </label>
+        </div>
+
+        {/* Actions */}
+        <div className="question-actions">
+          <button className="btn-outline">Previous</button>
+          <button className="btn-primary">Next Question →</button>
         </div>
       </div>
     </div>
