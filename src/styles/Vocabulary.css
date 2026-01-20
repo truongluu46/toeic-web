@@ -1,10 +1,25 @@
+/* =======================
+   GLOBAL
+======================= */
+body {
+  background: #0f172a;
+  color: #e5e7eb;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+}
+
+/* =======================
+   WRAPPER
+======================= */
 .vocab-wrapper {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* Header */
+/* =======================
+   HEADER
+======================= */
 .vocab-header {
   display: flex;
   justify-content: space-between;
@@ -14,12 +29,16 @@
 
 .vocab-header h1 {
   font-size: 30px;
+  color: #f9fafb;
 }
 
 .vocab-header p {
-  color: #555;
+  color: #9ca3af;
 }
 
+/* =======================
+   STATS
+======================= */
 .vocab-stats {
   display: flex;
   gap: 24px;
@@ -32,49 +51,93 @@
 .vocab-stats strong {
   display: block;
   font-size: 20px;
+  color: #f9fafb;
 }
 
 .vocab-stats span {
   font-size: 13px;
-  color: #666;
+  color: #9ca3af;
 }
 
-/* Toolbar */
+/* =======================
+   TOOLBAR
+======================= */
 .vocab-toolbar {
   display: flex;
   gap: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .vocab-toolbar input,
 .vocab-toolbar select {
   padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
+  border-radius: 12px;
+  border: 1px solid #1e293b;
+  background: #020617;
+  color: #e5e7eb;
   font-size: 15px;
 }
 
-/* Grid */
+.vocab-toolbar input::placeholder {
+  color: #64748b;
+}
+
+/* =======================
+   MODE SWITCH
+======================= */
+.mode-switch {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.mode-switch button {
+  padding: 8px 18px;
+  border-radius: 10px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mode-switch button:hover {
+  background: #020617;
+}
+
+.mode-switch button.active {
+  background: #2563eb;
+  border-color: #2563eb;
+}
+
+/* =======================
+   GRID (LIST MODE)
+======================= */
 .vocab-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 24px;
 }
 
-/* Card */
+/* =======================
+   CARD (LIST MODE)
+======================= */
 .vocab-item {
-  background: white;
-  border-radius: 16px;
+  background: #020617;
+  border-radius: 18px;
   padding: 24px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .vocab-item:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
 }
 
+/* =======================
+   WORD ROW
+======================= */
 .word-row {
   display: flex;
   justify-content: space-between;
@@ -83,23 +146,32 @@
 
 .word-row h3 {
   font-size: 22px;
+  color: #f9fafb;
 }
 
+/* =======================
+   LEVEL BADGE
+======================= */
 .level {
   font-size: 12px;
-  padding: 4px 10px;
+  padding: 4px 12px;
   border-radius: 20px;
-  background: #e5edff;
-  color: #2563eb;
+  background: rgba(37, 99, 235, 0.15);
+  color: #60a5fa;
 }
 
+/* =======================
+   MEANING
+======================= */
 .meaning {
   margin: 16px 0;
   line-height: 1.6;
-  color: #333;
+  color: #cbd5f5;
 }
 
-/* Tags */
+/* =======================
+   TAGS
+======================= */
 .tags {
   display: flex;
   gap: 8px;
@@ -108,33 +180,97 @@
 
 .tags span {
   font-size: 12px;
-  background: #f3f4f6;
-  padding: 4px 10px;
+  background: #020617;
+  border: 1px solid #1e293b;
+  color: #cbd5f5;
+  padding: 4px 12px;
   border-radius: 20px;
 }
 
-/* Actions */
+/* =======================
+   ACTIONS
+======================= */
 .actions {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .actions .learn {
   background: #2563eb;
   color: white;
   border: none;
-  padding: 8px 16px;
-  border-radius: 8px;
+  padding: 8px 18px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+.actions .learn:hover {
+  background: #1d4ed8;
 }
 
 .actions .save {
   background: transparent;
   border: none;
   font-size: 14px;
+  color: #9ca3af;
   cursor: pointer;
 }
 
-.actions .learn:hover {
-  background: #1e4ed8;
+/* =======================
+   FLASHCARD MODE
+======================= */
+.flashcard-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.flashcard {
+  width: 380px;
+  height: 240px;
+  background: linear-gradient(145deg, #020617, #020617);
+  border-radius: 24px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.flashcard:hover {
+  transform: scale(1.04);
+}
+
+.flashcard h2 {
+  font-size: 34px;
+  color: #f9fafb;
+}
+
+.flashcard p {
+  font-size: 16px;
+  color: #cbd5f5;
+  padding: 0 24px;
+}
+
+/* =======================
+   RESPONSIVE
+======================= */
+@media (max-width: 768px) {
+  .vocab-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .vocab-toolbar {
+    flex-direction: column;
+  }
+
+  .mode-switch {
+    flex-wrap: wrap;
+  }
 }
