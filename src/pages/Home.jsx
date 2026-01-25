@@ -23,6 +23,7 @@ function Home() {
           <Link to="/">Home</Link>
           <Link to="/vocabulary">Vocabulary</Link>
           <Link to="/practice">Practice</Link>
+          <Link to="/dictionary">Dictionary</Link>
         </nav>
       </header>
 
