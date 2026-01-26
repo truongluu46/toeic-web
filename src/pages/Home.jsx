@@ -24,6 +24,7 @@ function Home() {
           <Link to="/vocabulary">Vocabulary</Link>
           <Link to="/practice">Practice</Link>
           <Link to="/dictionary">Dictionary</Link>
+          <Link to="/tests">Tests</Link>
         </nav>
       </header>
 
